@@ -15,5 +15,9 @@ export default makeStyles(()=>({
       image: {
         marginLeft: '15px',
       },
+      FullCalendar: {
+        margin: '0 auto',
+        maxWidth: '900px',
+      }
 
 }))

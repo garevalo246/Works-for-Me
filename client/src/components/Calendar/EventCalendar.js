@@ -1,29 +1,37 @@
 import React, {Component} from 'react'
-import {Typography, Paper} from '@material-ui/core';
+import {Typography, Paper, requirePropFactory} from '@material-ui/core';
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import './Calendar.css';
 
+import googleCalendarPlugin from '@fullcalendar/google-calendar';
 export default class EventCalendar extends Component {
+
+    
     
     render() {
+       
         return(
-            <Paper>
-            <FullCalendar
-            
-            
+            <Paper variant = "outlined" elevation = {3}>
+            <FullCalendar           
+            aspectRatio = '2.0' 
+            headerToolbar={{
+               right: "prev,next today",
+               center: "title",
+               left: "dayGridMonth dayGridWeek dayGridDay",
+            }}
+              
+
             windowResizeDelay = "200"
             eventBackgroundColor  = "purple"
             eventBorderColor = "black"
             defaultView = "dayGridMonth"
-            plugins={[ dayGridPlugin ]}
             weekends = {true}
-            events={[
-              { title: 'event 1', date: '2021-04-01' },
-              { title: 'event 2', date: '2021-04-02' }
-
-              
-            ]}
+            plugins={[ dayGridPlugin, googleCalendarPlugin]}
+            googleCalendarApiKey= 'AIzaSyA7ILoMzctHVI16y1LWaTPUKlMp1sWcT_Q'
+            events={ {
+                googleCalendarId: 'giovanniarevalo246@gmail.com'
+            }}
             />
             </Paper>
         )
