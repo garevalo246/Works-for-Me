@@ -15,6 +15,18 @@ const postSchema = mongoose.Schema({
         type:Date,
         default: new Date()
     },
+    /*
+    title: string,
+    description: string,
+    startDate: : {
+        type:Date,
+        default: startDate
+    },
+    endDate: : {
+        type:Date,
+        default: endDate
+    },
+    */
 });
 
 const PostMessage = mongoose.model('PostMessage', postSchema);

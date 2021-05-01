@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import {  AppBar, Typography, Grow, Grid } from '@material-ui/core';
+import {  AppBar, Typography, Grid } from '@material-ui/core';
 import { useDispatch } from 'react-redux';
 import Container from 'react-bootstrap/Container'
 
@@ -9,34 +9,38 @@ import Form from './components/Form/Form';
 import memories from './images/calendar.png';
 import useStyles from './styles';
 import EventCalendar from './components/Calendar/EventCalendar';
+import bootstrap from 'react-bootstrap'
+import Image from 'react-bootstrap/Image'
+import { CalendarContainer } from 'react-datepicker';
 
 const App = () => {
     const classes = useStyles();
     const dispatch = useDispatch();
-
+    // const function (eventClickInfo) {
+    //  eventClickInfo.jsEvent   
+    // }
+  
     useEffect(()=> {dispatch(getPosts())}, [dispatch])
 
     return(
         <Container fluid = "lg">
             <AppBar className = {classes.appBar} position = "static" color = "inherit">
                 <Typography classname = {classes.heading} variant = "h3" align = "center" > Works for Me</Typography>
-                <img className = {classes.image} src = {memories} alt = "memories" height = "60" />
+                <img className = {classes.image} src = {memories} alt = "memories" height = "60"  />
             </AppBar>
-            {/* <Grow in> */}
                 <Container> 
-                    <Grid container justify = "space-evenly" alignItems = "strech" spacing = {4}>
+                    <Grid container justify = "space-evenly" alignItems = "strech" spacing = {2}>
                         <Grid item xs = {12} sm = {9}>
                             <EventCalendar /> 
                         </Grid>
-                        <Grid item xs = {12} sm = {3}>
+                        <Grid item xs = {12} sm = {2}>
                             <Form />
                         </Grid>
-                        <Grid item xs = {12} sm = {12}>
+                        <Grid item xs = {12} sm = {11}>
                             <Form />
                         </Grid>
                     </Grid>
                 </Container>
-            {/* </Grow> */}
         </Container>
     );
 
