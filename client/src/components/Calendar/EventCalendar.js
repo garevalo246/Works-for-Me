@@ -14,13 +14,12 @@ export default class EventCalendar extends Component {
         return(
             <Paper variant = "outlined" elevation = {3}>
             <FullCalendar           
-            aspectRatio = '2.0' 
+            aspectRatio = '1.55' 
             headerToolbar={{
                right: "prev,next today",
                center: "title",
                left: "dayGridMonth dayGridWeek dayGridDay",
             }}
-              
             windowResizeDelay = "200"
             eventBackgroundColor  = "purple"
             eventBorderColor = "purple"
