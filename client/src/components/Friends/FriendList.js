@@ -25,7 +25,7 @@ const FriendList = () => {
             <form>
                 
                     (FriendForm.js)
-                    <Typography variant = "h6">Friend's List
+                    <Typography variant = "h6">Friends List
                     <IconButton aria-label ="friend" size = "medium">
                       <PeopleAltSharpIcon />
                     </IconButton>

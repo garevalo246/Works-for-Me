@@ -1,9 +1,10 @@
 import React, {Component} from 'react'
-import {Typography, Paper, requirePropFactory} from '@material-ui/core';
+import {Paper} from '@material-ui/core';
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction'
 import './Calendar.css';
+
 
 import googleCalendarPlugin from '@fullcalendar/google-calendar';
 export default class EventCalendar extends Component {
@@ -39,6 +40,7 @@ export default class EventCalendar extends Component {
             
             events={ {
                 googleCalendarId: 'giovanniarevalo246@gmail.com',
+                
                
             }}
             />

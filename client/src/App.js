@@ -4,16 +4,12 @@ import { useDispatch } from 'react-redux';
 import Container from 'react-bootstrap/Container'
 
 import {getPosts} from './actions/posts'
-import Posts from './components/Posts/Posts';
 import Form from './components/Form/Form';
 import FriendForm from './components/Friends/FriendForm'
 import FriendList from './components/Friends/FriendList'
 import memories from './images/calendar.png';
 import useStyles from './styles';
 import EventCalendar from './components/Calendar/EventCalendar';
-import bootstrap from 'react-bootstrap'
-import Image from 'react-bootstrap/Image'
-import { CalendarContainer } from 'react-datepicker';
 
 const App = () => {
     const classes = useStyles();
